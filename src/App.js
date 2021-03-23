@@ -3,7 +3,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
-
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -24,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   }, 
 textoGrande:{
   fontSize: 80,
-  
+
 },
 ajusteBoton:{
   padding: 54,
@@ -184,11 +183,13 @@ function App() {
                 </Paper>
               </Grid>
               <Grid item xs={2}>
-                <Paper className={classes.paper, classes.ajusteBoton}>
+                
+                  <Paper className={classes.ajusteBoton}>
                   <Button variant="outlined" style={{color: "green", borderColor: "green"}} >
                     +
                   </Button>
-                </Paper>
+                  </Paper>
+                
               </Grid>
             </Grid>
           </div>
