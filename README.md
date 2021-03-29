@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Proyecto - Calculadora con React :fax: 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Este proyecto cuenta con una calculadora basica con **operaciones aritmeticas** sencillas._
 
-## Available Scripts
+<img src="/src/Img/Calculadora.png" alt="Calculadora"/>
 
-In the project directory, you can run:
+## Comenzando 🚀
 
-### `npm start`
+[PROYECTO-CALCULADORA](https://calculadorareactjs.netlify.app/) 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Mira **Despliegue** para conocer como desplegar el proyecto.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Pre-requisitos :page_facing_up:
 
-### `npm test`
+El equipo en el que va a instalar el software debe contar con:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* _[Node.js 64 bits](https://nodejs.org/es/) - Ultima versión  o [Node.js 32 bits](https://nodejs.org/es/download/releases/) - versión 13.14.0 o inferior._
+* _Posterior a la descarga del node.js, procedemos a descargar React._
+* _Un editor de codigo de su preferencia._
 
-### `npm run build`
+## Instalación :wrench:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_Al descargar e instalar node.js en tu computador, verifica en tu consola la versión del node.js con el siguiente comando:_
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+node -v  o  node --version
+``` 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Una vez que esa parte nos funciona, lo siguiente será hacer la instalación de todos los paquetes necesarios para ReactJS.
 
-### `npm run eject`
+Escribiremos el siguiente comando:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+npm install -g create-react-app
+``` 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Con este comando lo que hacemos es instalar ReactJS en nuestro ordenador de forma global.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Despues de tener instalado ReactJS, Nos iremos al directorio donde queremos que se almacene el nuevo proyecto y escribimos el siguiente comando:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+create-react-app nombre-de-la-app
+``` 
 
-## Learn More
+## Despliegue :package:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Una vez que creamos el proyecto, nos vamos al directorio donde quedo el proyecto desde la consola y escribimos el siguiente codigo:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm start
+``` 
 
-### Code Splitting
+Con este comando ejecuta la aplicación en el modo de desarrollo. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+si la ejecución sale exitosa mostrara lo siguiente y posteriormente se abrira en un navegador:
 
-### Analyzing the Bundle Size
+![img](https://desarrolloweb.com/archivoimg/general/4680.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Mientras la ejecucion siga activa la página se recargará si realiza modificaciones en el proyecto.
 
-### Making a Progressive Web App
+## Construido con :hammer_and_wrench:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* [node.js](https://nodejs.org/es/) - Entorno de ejecución para JavaScript.
+* [React](https://es.reactjs.org/) - Una biblioteca Javascript.
+* [Visual Studio Code](https://code.visualstudio.com/) - Un editor de código fuente.
+* [Material-UI](https://material-ui.com/) - Un framework para el desarrollo web.
 
-### Advanced Configuration
+## Autor :black_nib:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* **Jhon Sneyder Sánchez** - [jhonsanchez528](https://github.com/jhonsanchez528)
