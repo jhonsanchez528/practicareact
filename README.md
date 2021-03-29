@@ -2,6 +2,8 @@
 
 _Este proyecto cuenta con una calculadora basica con **operaciones aritmeticas** sencillas._
 
+<img src="/src/Img/Calculadora.png" alt="Calculadora"/>
+
 ## Comenzando 🚀
 
 [PROYECTO-CALCULADORA](https://calculadorareactjs.netlify.app/) 
@@ -42,7 +44,7 @@ create-react-app nombre-de-la-app
 
 ## Despliegue :package:
 
-Una vez que creamos el proyecto, nos vamos al directorio del proyecto y escribimos el siguiente codigo:
+Una vez que creamos el proyecto, nos vamos al directorio donde quedo el proyecto desde la consola y escribimos el siguiente codigo:
 
 ```
 npm start
@@ -50,7 +52,7 @@ npm start
 
 Con este comando ejecuta la aplicación en el modo de desarrollo. 
 
-si la ejecución sale exitosa mostrara lo siguiente:
+si la ejecución sale exitosa mostrara lo siguiente y posteriormente se abrira en un navegador:
 
 ![img](https://desarrolloweb.com/archivoimg/general/4680.png)
 
