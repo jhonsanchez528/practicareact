@@ -3,7 +3,7 @@ import './App.css';
 import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-
+import * as Math from 'mathjs';
 
 function App() {
   const [data, setData] = useState("");
@@ -37,7 +37,7 @@ function App() {
             <div className="botones">
               {calcBtns}
             </div>
-            <button className="suma" onClick={e => setData(data + e.target.value)} value="+" >
+            <button className="suma" onClick={e => setData(data + "+")} value="+" >
               +
         </button>
             <button className="resta" onClick={e => setData(data + e.target.value)} value="-" >
@@ -50,16 +50,16 @@ function App() {
               /
         </button>
 
-            <button onClick={e => {
+            <button className="igual" onClick={e => {
               try {
                 setData(
-                  String(eval(data)).length > 3 &&
-                    String(eval(data)).includes(".")
-                    ? String(eval + (data)).toFixed(4)
-                    : String(eval(data))
+                  String(Math.evaluate(data)).length > 3 &&
+                    String(Math.evaluate(data)).includes(".")
+                    ? String(Math.evaluate(data)).toFixed(4)
+                    : String(Math.evaluate(data))
                 );
               } catch (err) {
-                <div  value="aaaaaaaaa" ></div>
+
               }
             }}
               value="="

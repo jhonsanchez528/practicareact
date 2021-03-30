@@ -5,7 +5,7 @@
 .tarjeta{
   border-radius: 1%;
     max-width: 100%;
-    min-height: 53vh;
+    min-height: 57vh;
     background: whitesmoke;
 }
 button{
@@ -68,6 +68,9 @@ button{
     color:white;
     border-color: black;
 }
+.ac:hover{
+  background: rgb(160, 11, 11);
+}
 .suma{
   transform: translateX(-1px);
     height: 2.5em;
@@ -76,6 +79,9 @@ button{
     background: rgb(9, 170, 4);
     color:white;
     border-color: black;
+}
+.suma:hover{
+  background: rgb(14, 131, 3);
 }
 .resta{
     transform: translateX(0px);
@@ -86,26 +92,47 @@ button{
     color:white;
     border-color: black;
 }
+.resta:hover{
+  background: rgb(14, 131, 3);
+}
 .multiplicar{
   transform: translateX(-1px);
     height: 2.5em;
     width: 50%;
     cursor: pointer;
-    background: rgb(74, 10, 134);
+    background: rgb(9, 170, 4);
     color:white;
     border-color: black;
     margin-top: 1px;
 }
+.multiplicar:hover{
+  background: rgb(14, 131, 3);
+}
 .dividir{
     transform: translateX(0px);
-    transform: translateY(1px);
     height: 2.5em;
     width: 50%;
     cursor: pointer;
-    background: rgb(206, 209, 8);
+    background: rgb(9, 170, 4);
     color:white;
     border-color: black;
 
+}
+.dividir:hover{
+  background: rgb(14, 131, 3);
+}
+.igual{
+  transform: translateX(0px);
+  transform: translateY(1px);
+  height: 2.5em;
+  width: 100%;
+  cursor: pointer;
+  background: rgb(9, 170, 4);
+  color:white;
+  border-color: black;
+}
+.igual:hover{
+  background: rgb(14, 131, 3);
 }
 @media only screen and (max-width: 600px) {
   .limpiar {
