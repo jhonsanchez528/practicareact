@@ -2,6 +2,146 @@
   text-align: center;
 }
 
+.tarjeta{
+  border-radius: 1%;
+    max-width: 100%;
+    min-height: 57vh;
+    background: whitesmoke;
+}
+button{
+  border: #282c34;
+}
+.sub{
+  color:grey
+}
+.botones{
+  display: flex;
+  flex-wrap: wrap;
+  border: black;
+  transform: skew(0.1deg, 0.1deg);
+}
+.caja{
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 2rem;
+  transform: skew(350deg, 0.1deg);
+}
+
+.MuiInputBase-input.Mui-disabled {
+  opacity: 1;
+  font-size: 35px;
+}
+.titulo{
+  color:honeydew;
+}
+.botones Button{
+  background-color:rgb(8, 168, 168);
+  cursor: pointer;
+  padding: 2%;
+  flex: 1 0 26%;
+  color:honeydew;
+}
+.botones Button:hover{
+  background-color:rgb(4, 134, 134);
+}
+.botones button:hover{
+  border-color: honeydew;
+}
+.limpiar {
+  transform: translateX(-1px);
+    height: 2.5em;
+    width: 50%;
+    cursor: pointer;
+    background: rgb(240, 98, 16);
+    color:white;
+    border-color: black;
+}
+.limpiar:hover{
+  background: rgb(187, 75, 10);
+}
+.ac {
+  transform: translateX(0px);
+    height: 2.5em;
+    width: 50%;
+    cursor: pointer;
+    background: rgb(218, 19, 19);
+    color:white;
+    border-color: black;
+}
+.ac:hover{
+  background: rgb(160, 11, 11);
+}
+.suma{
+  transform: translateX(-1px);
+    height: 2.5em;
+    width: 50%;
+    cursor: pointer;
+    background: rgb(9, 170, 4);
+    color:white;
+    border-color: black;
+}
+.suma:hover{
+  background: rgb(14, 131, 3);
+}
+.resta{
+    transform: translateX(0px);
+    height: 2.5em;
+    width: 50%;
+    cursor: pointer;
+    background: rgb(9, 170, 4);
+    color:white;
+    border-color: black;
+}
+.resta:hover{
+  background: rgb(14, 131, 3);
+}
+.multiplicar{
+  transform: translateX(-1px);
+    height: 2.5em;
+    width: 50%;
+    cursor: pointer;
+    background: rgb(9, 170, 4);
+    color:white;
+    border-color: black;
+    margin-top: 1px;
+}
+.multiplicar:hover{
+  background: rgb(14, 131, 3);
+}
+.dividir{
+    transform: translateX(0px);
+    height: 2.5em;
+    width: 50%;
+    cursor: pointer;
+    background: rgb(9, 170, 4);
+    color:white;
+    border-color: black;
+
+}
+.dividir:hover{
+  background: rgb(14, 131, 3);
+}
+.igual{
+  transform: translateX(0px);
+  transform: translateY(1px);
+  height: 2.5em;
+  width: 100%;
+  cursor: pointer;
+  background: rgb(9, 170, 4);
+  color:white;
+  border-color: black;
+}
+.igual:hover{
+  background: rgb(14, 131, 3);
+}
+@media only screen and (max-width: 600px) {
+  .limpiar {
+    
+      height: 2.5em;
+      width: 50%;
+      cursor: pointer;
+  }
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

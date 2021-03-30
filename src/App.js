@@ -1,232 +1,77 @@
-import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
+import React, { useState } from 'react';
+import './App.css';
 import Container from '@material-ui/core/Container';
-
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-  altura: {
-    paddingTop: 20,
-    
-  }, 
-textoGrande:{
-  fontSize: 80,
-
-},
-ajusteBoton:{
-  padding: 54,
-  position: 'absolute',
-},
-
-}));
-
+import * as Math from 'mathjs';
 
 function App() {
-  const classes = useStyles();
+  const [data, setData] = useState("");
+  const calcBtns = [];
+  [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, ".", "%"].forEach(item => {
+    calcBtns.push(
+      <button onClick={e => {
+        setData(data + e.target.value)
+      }}
+        value={item}
+        key={item}>
+        {item}
+      </button>
+    )
+  })
   return (
-
     <React.Fragment>
       <CssBaseline />
-      <Container fixed className={classes.altura} >
-        <Typography component="div" style={{ backgroundColor: '#c0c0c0',  padding: 50,
-    borderRadius: 20, }} >
+      <Container maxWidth="sm">
+        <div className="App">
+          <center><h1 className="titulo">Calculadora</h1></center>
+          <div className="tarjeta">
+            <div className="sub">{data}</div>
+            <TextField className="caja" fullWidth value={data} disabled label="Ingreso de numeros" id="standard-basic" variant="standard" />
+            <button className="limpiar" onClick={() => setData(data.substr(0, data.length - 1))} >
+              ←
+        </button>
+            <button className="ac" onClick={() => setData("")} >
+              AC
+        </button>
+            <div className="botones">
+              {calcBtns}
+            </div>
+            <button className="suma" onClick={e => setData(data + "+")} value="+" >
+              +
+        </button>
+            <button className="resta" onClick={e => setData(data + e.target.value)} value="-" >
+              -
+        </button>
+            <button className="multiplicar" onClick={e => setData(data + e.target.value)} value="*" >
+              X
+        </button>
+            <button className="dividir" onClick={e => setData(data + e.target.value)} value="/" >
+              /
+        </button>
 
-          <div className={classes.root}>
-            <Grid container spacing={3}>
-              <h1  style={{color: 'white', textAlign:'center'}}>CALCULADORA</h1>
-              <Grid item xs={12}>
-                <Paper className={classes.paper}>
-                  <form className={classes.root} noValidate autoComplete="off">
-                    
-                    <TextField className={classes.textoGrande} fullWidth  id="outlined-basic" label="Ingrese un valor" variant="outlined" />
-                  </form>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}></Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button fixed  variant="contained" color="secondary">
-                    AC
-                  </Button>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                 
-                  <Button variant="outlined" style={{color: "green", borderColor: "green"}}  >
-                    CE
-                  </Button>
-                  
-                </Paper>
-                
-              </Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" style={{color: "green", borderColor: "green"}}  >
-                    %
-                  </Button>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" style={{color: "green", borderColor: "green"}} >
-                    /
-                  </Button>
-                </Paper>
-              </Grid>
-            </Grid>
-          </div>
-          <div className={classes.root}>
-            <Grid container spacing={3}>
+            <button className="igual" onClick={e => {
+              try {
+                setData(
+                  String(Math.evaluate(data)).length > 3 &&
+                    String(Math.evaluate(data)).includes(".")
+                    ? String(Math.evaluate(data)).toFixed(4)
+                    : String(Math.evaluate(data))
+                );
+              } catch (err) {
 
-              <Grid item xs={2}></Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" color="primary">
-                    7
-                  </Button>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" color="primary">
-                    8
-                  </Button>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" color="primary">
-                    9
-                  </Button>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" style={{color: "green", borderColor: "green"}} >
-                    X
-                  </Button>
-                </Paper>
-              </Grid>
-            </Grid>
+              }
+            }}
+              value="="
+            >
+              =
+        </button>
           </div>
-          <div className={classes.root}>
-            <Grid container spacing={3}>
-
-              <Grid item xs={2}></Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" color="primary">
-                    4
-                  </Button>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" color="primary">
-                    5
-                  </Button>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" color="primary">
-                    6
-                  </Button>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" style={{color: "green", borderColor: "green"}} >
-                    -
-                  </Button>
-                </Paper>
-              </Grid>
-            </Grid>
-          </div>
-          <div className={classes.root}>
-            
-            <Grid container spacing={3}>
-
-              <Grid item xs={2}></Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" color="primary">
-                    1
-                  </Button>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" color="primary">
-                    2
-                  </Button>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" color="primary">
-                    3
-                  </Button>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}>
-                
-                  <Paper className={classes.ajusteBoton}>
-                  <Button variant="outlined" style={{color: "green", borderColor: "green"}} >
-                    +
-                  </Button>
-                  </Paper>
-                
-              </Grid>
-            </Grid>
-          </div>
-          <div className={classes.root}>
-          <Grid container spacing={3}>
-
-              <Grid item xs={2}></Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" color="primary">
-                    0
-                  </Button>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" style={{color: "green", borderColor: "green"}} >
-                    .
-                  </Button>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}>
-                <Paper className={classes.paper}>
-                  <Button variant="outlined" style={{color: "green", borderColor: "green"}} >
-                    =
-                  </Button>
-                </Paper>
-              </Grid>
-              <Grid item xs={2}>
-                
-              </Grid>
-            </Grid>
-          </div>
-        </Typography>
+        </div>
       </Container>
     </React.Fragment>
   );
+
 }
 
 export default App;
